@@ -1,7 +1,7 @@
 import defaultAvatar from '../images/default.jpeg';
 import PropTypes from 'prop-types';
 import styles from './Profile.module.css';
-console.log(defaultAvatar);
+
 
 export default function Profile({ name, tag, location, avatar, stats }) {
   return (
@@ -39,6 +39,6 @@ Profile.propTypes = {
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
   stats: PropTypes.objectOf(PropTypes.number).isRequired,
 };
