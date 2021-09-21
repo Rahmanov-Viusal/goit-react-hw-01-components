@@ -1,6 +1,6 @@
-import defaultAvatar from "../images/default.jpeg";
-import PropTypes from "prop-types";
-import styles from "./Profile.module.css";
+import defaultAvatar from '../images/default.jpeg';
+import PropTypes from 'prop-types';
+import styles from './Profile.module.css';
 console.log(defaultAvatar);
 
 export default function Profile({ name, tag, location, avatar, stats }) {
