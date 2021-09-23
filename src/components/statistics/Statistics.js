@@ -1,5 +1,5 @@
-import styles from "./Statistics.module.css";
-import PropTypes from "prop-types";
+import styles from './Statistics.module.css';
+import PropTypes from 'prop-types';
 
 const colorPicker = () => {
   const red = Math.round(Math.random() * 255);
@@ -9,17 +9,13 @@ const colorPicker = () => {
   return backgroundColor;
 };
 
-export default function Statistics({ title = "Upload stats", stats }) {
+export default function Statistics({ title, stats }) {
   return (
     <section className={styles.statistics}>
       {title && <h2 className={styles.title}>{title}</h2>}
       <ul className={styles.statList}>
         {stats.map(({ id, label, percentage }) => (
-          <li
-            key={id}
-            className={styles.statList_item}
-            style={{ backgroundColor: colorPicker() }}
-          >
+          <li key={id} className={styles.statList_item} style={{ backgroundColor: colorPicker() }}>
             <span className={styles.statList_label}>{label}</span>
             <span className={styles.statList_percentage}>{percentage}%</span>
           </li>
@@ -30,7 +26,7 @@ export default function Statistics({ title = "Upload stats", stats }) {
 }
 
 Statistics.defaultProps = {
-  title: "",
+  title: '',
 };
 
 Statistics.propTypes = {
@@ -40,6 +36,6 @@ Statistics.propTypes = {
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-    })
+    }),
   ),
 };

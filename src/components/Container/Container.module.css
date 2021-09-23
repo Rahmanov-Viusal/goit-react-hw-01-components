@@ -6,3 +6,8 @@
   padding-right: 15px;
   padding-top: 1px;
 }
+ul,
+h2 {
+  margin: 0px;
+  padding: 0px;
+}
